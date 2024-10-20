@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+</head>
+<body>
+    <h1>Survey</h1>
+    <form action="{{ url_for('survey') }}" method="POST">
+        <label for="question1">How satisfied are you with our service?</label><br>
+        <select id="question1" name="question1" required>
+            <option value="very_satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="dissatisfied">Dissatisfied</option>
+            <option value="very_dissatisfied">Very Dissatisfied</option>
+        </select><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

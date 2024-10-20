@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Details</title>
+</head>
+<body>
+    <h1>User Details</h1>
+    <p>Email: {{ email }}</p>
+    <form action="/user_details" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="school_name">School Name:</label>
+        <input type="text" id="school_name" name="school_name" required><br>
+
+        <label for="mobile_no">Mobile No:</label>
+        <input type="text" id="mobile_no" name="mobile_no" required><br>
+
+        <label for="payment">Payment:</label>
+        <input type="checkbox" id="payment" name="payment"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

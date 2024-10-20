@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Surveys</title>
+</head>
+<body>
+    <h1>Your Previous Surveys</h1>
+    <ul>
+        {% for survey in surveys %}
+            <li>{{ survey.date_submitted }}: {{ survey.question1 }}</li>
+        {% else %}
+            <li>No surveys submitted yet.</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('survey') }}">Take Survey Again</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
